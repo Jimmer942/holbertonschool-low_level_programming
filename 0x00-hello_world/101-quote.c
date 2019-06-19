@@ -7,8 +7,9 @@
  */
 int main(void)
 {
-	char  *frase = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char *pha = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 	int a = strlen(frase);
+
 	write(2, frase, a);
 	return (1);
 }
