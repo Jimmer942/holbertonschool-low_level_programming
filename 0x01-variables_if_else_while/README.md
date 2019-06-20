@@ -1,0 +1,1 @@
+This folder contains a serious of code to practice loops and statements on C
