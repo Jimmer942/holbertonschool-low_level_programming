@@ -1,46 +1,35 @@
 #include <stdio.h>
 /**
- * main - Prints two numbers of two digits without repeating
- * Return: 0 if all is ok
+ * main - Patience
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i, j, k, l, a, b;
+	int i, j, k, l;
 
-	i = j = k = l = a = b = 0;
-	for (; i < 10; i++)
+	for (i = 48 ; i <= 57 ; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 48 ; j <= 57 ; j++)
 		{
-			for (; k < 10; k++)
+			for (k = 48 ; k <= 57 ; k++)
 			{
-				if (k == 0)
-					l = j;
-				else
-					l = 0;
-				for (; l < 10; l++)
+				for (l = 48 ; l <= 57 ; l++)
 				{
-					a = (i * 10) + j;
-					b = (k * 10) + l;
-					if (!((i == k) && (j == l)) && (a < b))
+					if (!(((i * 10) + j) < ((k * 10) + l)))
 					{
-						putchar(i + '0');
-						putchar(j + '0');
-						putchar(' ');
-						putchar(k + '0');
-						putchar(l + '0');
-						if (!((i + '0' == '9')
-						      && (j + '0' == '8')
-						      && (k + '0' == '9')
-						      && (l + '0' == '9')))
+						putchar(44);
+						putchar(32);
+						if (!(i != 57 || j != 56 || k != 57 || l != 57))
 						{
-							putchar(',');
-							putchar(' ');
+							putchar(i);
+							putchar(j);
+							putchar(32);
+							putchar(k);
+							putchar(k);
 						}
 					}
 				}
 			}
-			k = 0;
 		}
 	}
 	putchar('\n');
