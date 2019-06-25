@@ -8,13 +8,13 @@ int main(void)
 	int i;
 	int cont = 0;
 
-	for (i = 0; i < 1024; i++)
+	for (i = 0; i <= 1023; i++)
 	{
 		if (i % 3 == 0 || i % 5 == 0)
 		{
 			cont = cont + i;
 		}
 	}
-	printf("%d \n", cont);
+	printf("%d\n", cont);
 	return (0);
 }
