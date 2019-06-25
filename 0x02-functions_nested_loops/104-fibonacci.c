@@ -21,7 +21,7 @@ int main(void)
 		if (i == 97)
 		{
 			aux = fibo / 10;
-			printf("%.0Lf6 \n", aux);
+			printf("%.0Lf6\n", aux);
 		}
 		else
 		{
@@ -34,8 +34,8 @@ int main(void)
 				}
 				else
 				{
-					aux2 = (fibo / 100);
-					printf("%.0Lf49, ", aux2);
+					aux2 = (fibo / 10) - 1;
+					printf("%.0Lf9, ", aux2);
 				}
 			}
 			else
