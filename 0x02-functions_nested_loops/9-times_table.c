@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * times_table - prints the alphabet in lowercase
+ * times_table - a function that prints the 9 times table, starting with 0.
  * Return: 0 if compilation is succesfully
  */
 void times_table(void)
@@ -8,7 +8,7 @@ void times_table(void)
 	int i, j;
 	int m, d, u;
 
-	for (i = 0; i <= 10; i++)
+	for (i = 0; i <= 9; i++)
 	{
 		for (j = 0; j <= 9; j++)
 		{
