@@ -12,12 +12,12 @@ int main(void)
 	long double cont2 = 1;
 
 	printf("1, ");
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 97; i++)
 	{
 		cont1 = cont2;
 		cont2 = fibo;
 		fibo = cont1 + cont2;
-		if (i < 99)
+		if (i != 96)
 		{
 			printf("%.0Lf, ", fibo);
 		}

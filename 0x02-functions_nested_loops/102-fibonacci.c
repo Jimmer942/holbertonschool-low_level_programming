@@ -11,12 +11,12 @@ int main(void)
 	long long cont2 = 1;
 
 	printf("1, ");
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 49; i++)
 	{
 		cont1 = cont2;
 		cont2 = fibo;
 		fibo = cont1 + cont2;
-		if (i < 49)
+		if (i != 48)
 		{
 		printf("%lld, ", fibo);
 		}
