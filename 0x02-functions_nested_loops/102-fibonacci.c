@@ -6,6 +6,7 @@
 int main(void)
 {
 	int i;
+
 	long double fibo = 1;
 	long double cont1 = 0;
 	long double cont2 = 1;
