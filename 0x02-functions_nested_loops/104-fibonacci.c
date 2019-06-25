@@ -26,4 +26,5 @@ int main(void)
 			printf("%.0Lf\n", fibo);
 		}
 	}
+	return (0);
 }

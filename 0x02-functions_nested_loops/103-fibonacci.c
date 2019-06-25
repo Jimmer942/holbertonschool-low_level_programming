@@ -29,4 +29,5 @@ int main(void)
 		}
 	}
 	printf("%lld\n", sum);
+	return (0);
 }
