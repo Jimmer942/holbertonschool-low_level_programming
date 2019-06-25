@@ -6,7 +6,7 @@
 int main(void)
 {
 	int i;
-	
+
 	long int fibo = 1;
 	long int cont1 = 0;
 	long int cont2 = 1;
