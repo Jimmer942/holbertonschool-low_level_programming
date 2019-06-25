@@ -11,7 +11,6 @@ int main(void)
 	long double cont1 = 0;
 	long double cont2 = 1;
 
-	//printf("1, ");
 	for (i = 0; i <= 49; i++)
 	{
 		fibo = cont1 + cont2;
