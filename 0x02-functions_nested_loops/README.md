@@ -1,0 +1,1 @@
+This project contains a serious of tasks with loops
