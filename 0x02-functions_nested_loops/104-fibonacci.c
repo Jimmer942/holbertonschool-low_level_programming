@@ -14,7 +14,7 @@ int main(void)
 		cont2 = fibo;
 		if (i == 97)
 		{ aux = fibo / 10;
-			printf("%d %.0Lf6\n", i, aux);
+			printf("%.0Lf6\n", aux);
 		}
 		else
 		{
@@ -22,26 +22,26 @@ int main(void)
 			{
 				if (i == 95)
 				{ aux1 = (fibo / 10) - 0.5;
-					printf("%d %.0Lf7\n", i, aux1);
+					printf("%.0Lf7, ", aux1);
 				}
 				else if (i == 94)
 				{ aux2 = fibo - 1;
-					printf("%d %.0Lf\n", i, aux2);
+					printf("%.0Lf, ", aux2);
 				}
 				else if (i == 93)
 				{ aux3 = (fibo / 10);
-					printf("%d %.0Lf5\n", i, aux3);
+					printf("%.0Lf5, ", aux3);
 				}
 				else if (i == 92)
 				{ aux4 = (fibo / 10) - 1;
-					printf("%d %.0Lf7\n", i, aux4);
+					printf("%.0Lf7, ", aux4);
 				}
 				else
 				{ aux5 = (fibo / 10) - 1;
-					printf("%d %.0Lf9\n", i, aux5);
+					printf("%.0Lf9, ", aux5);
 				} }
 			else
-			{ printf("%d %.0Lf\n", i, fibo);
+			{ printf("%.0Lf, ", fibo);
 			}
 		}
 	} return (0); }
