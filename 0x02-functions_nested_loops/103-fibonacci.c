@@ -6,10 +6,10 @@
 int main(void)
 {
 	int i;
-	long long fibo = 1;
-	long long cont1 = 0;
-	long long cont2 = 1;
-	long long sum = 0;
+	long int fibo = 1;
+	long int cont1 = 0;
+	long int cont2 = 1;
+	long int sum = 0;
 
 	for (i = 0; i < 50; i++)
 	{
@@ -28,6 +28,6 @@ int main(void)
 			i = 50;
 		}
 	}
-	printf("%lld\n", sum);
+	printf("%ld\n", sum);
 	return (0);
 }
