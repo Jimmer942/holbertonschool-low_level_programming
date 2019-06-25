@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_times_table - prints the alphabet in lowercase
+ * print_times_table -  a function that prints the n times table, starting with 0.
  * @n: a numbers of nubers
  * Return: 0 if compilation is succesfully
  */
@@ -18,7 +18,7 @@ if (n <= 15 && n >= 0)
 				_putchar(' ');
 				c = m / 100;
 				d = m / 10;
-				d = m % 10;
+				d = d % 10;
 				u = m % 10;
 				_putchar(c + '0');
 				_putchar(d + '0');
