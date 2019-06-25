@@ -6,9 +6,9 @@
 int main(void)
 {
 	int i;
-	long long fibo = 1;
-	long long cont1 = 0;
-	long long cont2 = 1;
+	long double fibo = 1;
+	long double cont1 = 0;
+	long double cont2 = 1;
 
 	printf("1, ");
 	for (i = 0; i < 49; i++)
@@ -18,11 +18,11 @@ int main(void)
 		fibo = cont1 + cont2;
 		if (i != 48)
 		{
-		printf("%lld, ", fibo);
+		printf("%.0Lf, ", fibo);
 		}
 		else
 		{
-			printf("%lld", fibo);
+			printf("%.0Lf", fibo);
 		}
 	}
 	printf("\n");
