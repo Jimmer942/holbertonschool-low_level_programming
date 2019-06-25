@@ -6,6 +6,7 @@
 int main(void)
 {
 	int i;
+	
 	long int fibo = 1;
 	long int cont1 = 0;
 	long int cont2 = 1;
@@ -15,13 +16,13 @@ int main(void)
 	{
 		if (!(fibo > 3000000))
 		{
-		cont1 = cont2;
-		cont2 = fibo;
-		fibo = cont1 + cont2;
-		if (fibo % 2 == 0)
-		{
-			sum = sum + fibo;
-		}
+			fibo = cont1 + cont2;
+			cont1 = cont2;
+			cont2 = fibo;
+			if (fibo % 2 == 0)
+			{
+				sum = sum + fibo;
+			}
 		}
 		else
 		{

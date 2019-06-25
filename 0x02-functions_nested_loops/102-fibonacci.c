@@ -11,13 +11,13 @@ int main(void)
 	long double cont1 = 0;
 	long double cont2 = 1;
 
-	printf("1, ");
-	for (i = 0; i < 49; i++)
+	//printf("1, ");
+	for (i = 0; i <= 49; i++)
 	{
+		fibo = cont1 + cont2;
 		cont1 = cont2;
 		cont2 = fibo;
-		fibo = cont1 + cont2;
-		if (i != 48)
+		if (i != 49)
 		{
 		printf("%.0Lf, ", fibo);
 		}
