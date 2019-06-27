@@ -25,12 +25,11 @@ int main(void)
 			for (i = beg; i <= num; i++)
 			{
 				if (num % i == 0)
+				{
 					cont++;
+				}		
 			}
-			if (cont == 2)
-			{
-			}
-			else
+			if (!(cont == 2))
 			{
 				p = num;
 			}
