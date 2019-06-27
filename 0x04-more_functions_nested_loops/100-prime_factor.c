@@ -5,8 +5,9 @@
  */
 int main(void)
 {
-	int cont;
+	int beg;
 	int i;
+	int cont;
 	long long int input = 612852475143;
 	int p = 2;
 	int num = 2;
@@ -19,14 +20,17 @@ int main(void)
 		}
 		else
 		{
+			beg = num;
 			num++;
-			for (i = 1; i < num; i++)
+			for (i = beg; i <= num; i++)
 			{
 				if (num % i == 0)
 					cont++;
 			}
 			if (cont == 2)
-				;
+			{
+			}
+			else
 			{
 				p = num;
 			}
