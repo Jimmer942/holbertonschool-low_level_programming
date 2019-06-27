@@ -1,0 +1,10 @@
+#include "holberton.h"
+/**
+ * _islower - prints 1 if char is lowercase or o if not
+ * @c: The character to say if is lower
+ * Return: 0 if compilation is succesfully
+ */
+int mul(int a, int b)
+{
+	return (a * b);
+}
