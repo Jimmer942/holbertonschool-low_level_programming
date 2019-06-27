@@ -5,12 +5,12 @@
  */
 int main(void)
 {
-	long long int beg;
-	long long int i;
-	long long int cont;
+	int beg;
+	int i;
+	int cont;
 	long long int input = 612852475143;
-	long long int p = 2;
-	long long int num = 2;
+	int p = 2;
+	int num = 2;
 
 	while (input != 1)
 	{
@@ -36,6 +36,6 @@ int main(void)
 			}
 		}
 	}
-	printf("%lld\n", p);
+	printf("%d\n", p);
 	return (0);
 }
