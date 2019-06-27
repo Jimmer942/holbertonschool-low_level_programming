@@ -3,7 +3,7 @@
  * main - that prints the numbers from 1 to 100
  * Return: 0 if compilation is succesfully
  */
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -30,4 +30,5 @@ void main(void)
 		}
 	}
 	printf("\n");
+	return (0);
 }
