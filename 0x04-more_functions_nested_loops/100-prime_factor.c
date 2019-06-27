@@ -8,7 +8,7 @@ int main(void)
 	int beg;
 	int i;
 	int cont;
-	long long int input = 612852475143;
+	long int input = 612852475143;
 	int p = 2;
 	int num = 2;
 
@@ -25,13 +25,11 @@ int main(void)
 			for (i = beg; i <= num; i++)
 			{
 				if (num % i == 0)
-				{
 					cont++;
-				}		
-			}
-			if (!(cont == 2))
-			{
-				p = num;
+				if (!(cont == 2))
+				{
+					p = num;
+				}
 			}
 		}
 	}
