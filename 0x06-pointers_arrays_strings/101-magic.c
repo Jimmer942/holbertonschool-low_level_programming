@@ -1,8 +1,5 @@
 #include <stdio.h>
-/**
- * main - change a value using memory.
- * Return: 0 on succes.
- */
+
 int main(void)
 {
 	int n;
