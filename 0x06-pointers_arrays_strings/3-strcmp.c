@@ -8,12 +8,13 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int n;
+	int n = 1;
 	int i = 0;
 
-	do {
+	while (n != 0 && s1[i] == '\0' && s2[i] == '\0');
+	{
 		n = s1[i] - s2[i];
 		i++;
-	} while (n == 0 && s1[i] == '\0' && s2[i] == '\0');
+	}
 	return (n);
 }
