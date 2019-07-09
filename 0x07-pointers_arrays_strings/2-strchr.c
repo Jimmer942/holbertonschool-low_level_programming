@@ -7,13 +7,16 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i;
+	int i, len = 0;
 	char *p = (void *)0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; dest[i] != '\0'; i++)
+		len++;
+
+	for (i = 0; i <= len; i++)
 	{
 		if (s[i] == c)
-		return (s + i);
+			return (s + i);
 	}
-        return (p);
+	return (p);
 }
