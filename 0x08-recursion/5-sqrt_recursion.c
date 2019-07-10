@@ -1,17 +1,36 @@
 #include "holberton.h"
 /**
- * factorial - is  a function that returns the factorial of a given number.
+ * _sqrt - a function that returns the natural square root of a number.
  * @n: given number.
- * Return: factorial
+ * @i: Counter.
+ * Return: Square root.
  */
-int _sqrt_recursion(int n)
+int _sqrt(int n, int i)
 {
 	if (n >= 0)
 	{
-		if ()
+		if (i <= n)
+		{
+			if (i * i == n)
+			{
+				return (i);
+			}
+			else
+			{
+				i++;
+				return (_sqrt(n, i));
+			}
+		}
 	}
-	else
-	{
-		return (-1);
-	}
+	return (-1);
+}
+
+/**
+ * _sqrt_recursion - returns the natural square root of a number.
+ * @n: given number.
+ * Return: Square root
+ */
+int _sqrt_recursion(int n)
+{
+	return (_sqrt(n, 0));
 }
