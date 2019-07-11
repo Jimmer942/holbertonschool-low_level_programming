@@ -19,7 +19,8 @@ int _strlen_recursion(char *s)
 /**
  * compare - a function that compares upsidedown a string.
  * @s: given string.
- * @l: length.
+ * @l: dinamic length.
+ * @st: static length.
  * @b: begining of the string
  * @c:numbers of diferences
  * Return: Square root.
@@ -34,7 +35,7 @@ int compare(char *s, int l, int c, int b, int st)
 			c++;
 		b++;
 		l--;
-		return compare(s, l, c, b, st);
+		return (compare(s, l, c, b, st));
 	}
 	else
 	{
@@ -48,9 +49,7 @@ int compare(char *s, int l, int c, int b, int st)
  */
 int is_palindrome(char *s)
 {
-	int c;
-	c = compare(s, _strlen_recursion(s), 0, 0, 0);
-	if (c == 0)
+	if (compare(s, _strlen_recursion(s), 0, 0, 0) == 0)
 	{
 		return (1);
 	}
