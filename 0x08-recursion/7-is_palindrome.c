@@ -15,6 +15,7 @@ int _strlen_recursion(char *s)
 		return (1 + _strlen_recursion(s + 1));
 	}
 }
+
 /**
  * compare - a function that compares upsidedown a string.
  * @s: given string.
@@ -24,25 +25,22 @@ int _strlen_recursion(char *s)
  * Return: Square root.
  */
 
-int compare(char *s, int l, int c, int b)
+int compare(char *s, int l, int c, int b, int st)
 {
-	l = _strlen_recursion(s);
-	if (l >= 0)
+	st = _strlen_recursion(s);
+	if (b < st / 2)
 	{
-		if (*s != 0)
-		{
-			if (s[b] != s[l - 1])
-			{
-				c++;
-				b++;
-				l--;
-				compare(s, l, c, b);
-			}
-		}
+		if (s[b] != s[l - 1])
+			c++;
+		b++;
+		l--;
+		return compare(s, l, c, b, st);
 	}
-	return (c);
+	else
+	{
+		return (c);
+	}
 }
-
 /**
  * is_palindrome - Returns 1 if a string is a palindrome and 0 if not.
  * @s: given string.
@@ -50,7 +48,9 @@ int compare(char *s, int l, int c, int b)
  */
 int is_palindrome(char *s)
 {
-	if (compare(s, 0, 0, 0) == 0)
+	int c;
+	c = compare(s, _strlen_recursion(s), 0, 0, 0);
+	if (c == 0)
 	{
 		return (1);
 	}
