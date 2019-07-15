@@ -9,7 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int add = 0, i;
+	unsigned int add = 0;
+	int i;
 
 	for (i = 0; i < argc; i++)
 	{
