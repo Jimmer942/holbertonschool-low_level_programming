@@ -35,6 +35,6 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		return(p);
+		return (p);
 	}
 }
