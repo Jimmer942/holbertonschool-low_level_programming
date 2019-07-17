@@ -110,6 +110,7 @@ char **strtow(char *str)
 		if (pos == NULL)
 		{
 			free(pos);
+			free_grid(m, words);
 			return (NULL);
 		}
 		look_pos(str, pos);
@@ -126,8 +127,7 @@ char **strtow(char *str)
 				*(*(m + b) + l) = *(str + p1);
 			*(*(m + b) + l) = '\0';
 			b1 = b1 + 2;
-		}
-		m[b + 1] = NULL;
+		} m[b + 1] = NULL;
 		return (m);
 	}
 	else
