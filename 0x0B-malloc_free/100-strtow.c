@@ -93,44 +93,44 @@ void look_pos(char *str, int *pos)
  */
 char **strtow(char *str)
 {
-	int words = 0;
-	int b = 0;
-	int b1 = 0;
-	int l = 0;
+	int words = 0, b = 0, b1 = 0, l = 0;
 	char **m = NULL;
 	int *pos = NULL;
 
-	words = count_words(str);
-	m = (char **) malloc((sizeof(char *) * words) + 1);
-	if (m == NULL || words == 0)
+	if (*str != '\0' || str != NULL)
 	{
-		free_grid(m, words);
-		return (NULL);
-	}
-	pos = (int *)malloc(sizeof(int) * words * 2);
-	if (pos == NULL)
-	{
-		free(pos);
-		return (NULL);
-	}
-	look_pos(str, pos);
-	for (b = 0; b < words; b++)
-	{
-		int p1 = pos[b1];
-		int p2 = pos[b1 + 1];
-		int sz = p2 - p1 + 2;
-		*(m + b) = (char *)malloc(sizeof(char) * (sz));
-		if (m == NULL)
+		words = count_words(str);
+		m = (char **) malloc((sizeof(char *) * words) + 1);
+		if (m == NULL || words == 0)
 		{
-			free(m);
+			free_grid(m, words);
 			return (NULL);
 		}
-
-		for (l = 0; l < sz - 1; l++, p1++)
-			*(*(m + b) + l) = *(str + p1);
-		*(*(m + b) + l) = '\0';
-		b1 = b1 + 2;
+		pos = (int *)malloc(sizeof(int) * words * 2);
+		if (pos == NULL)
+		{
+			free(pos);
+			return (NULL);
+		}
+		look_pos(str, pos);
+		for (b = 0; b < words; b++)
+		{
+			int p1 = pos[b1], p2 = pos[b1 + 1], sz = p2 - p1 + 2;
+			*(m + b) = (char *)malloc(sizeof(char) * (sz));
+			if (m == NULL)
+			{
+				free(m);
+				return (NULL);
+			}
+			for (l = 0; l < sz - 1; l++, p1++)
+				*(*(m + b) + l) = *(str + p1);
+			*(*(m + b) + l) = '\0';
+			b1 = b1 + 2;
+		}
+		m[b + 1] = NULL;
+		return (m);
 	}
-	m[b + 1] = NULL;
-	return (m);
+	else
+	{ return (NULL);
+	}
 }
