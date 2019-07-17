@@ -126,6 +126,6 @@ char **strtow(char *str)
 		*(*(m + b) + l) = '\0';
 		b1 = b1 + 2;
 	}
-	*(m + b) = NULL;
+	m[b + 1] = NULL;
 	return (m);
 }
