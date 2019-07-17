@@ -108,6 +108,11 @@ char **strtow(char *str)
 		return (NULL);
 	}
 	pos = (int *)malloc(sizeof(int) * words * 2);
+	if (pos == NULL)
+	{
+		free(pos);
+		return (NULL);
+	}
 	look_pos(str, pos);
 	for (b = 0; b < words; b++)
 	{
