@@ -13,11 +13,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int i, range;
 	char *ch;
-  	void *p = NULL;
+	void *p = NULL;
 
 	range = nmemb * size;
+	if (range == 0)
+		return (NULL);
 	p = malloc(range);
-	if (p != NULL || range != 0)
+	if (p != NULL)
 	{
 		ch = (char *)p;
 		for (i = 0; i < range; i++)
