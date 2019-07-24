@@ -1,6 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * main - a program that multiplies two numbers.
  * @argc: argument count or size of arguments.
@@ -14,6 +15,11 @@ int main(int argc, char *argv[])
 
 	if (argc == 4)
 	{
+		if (strlen(*(argv + 2)) != 1)
+		{
+			printf("Error\n");
+			exit(99);
+		}
 		operation = get_op_func(*(argv + 2));
 		if (operation != NULL)
 		{
