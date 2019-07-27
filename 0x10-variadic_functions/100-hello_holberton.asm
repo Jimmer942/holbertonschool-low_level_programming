@@ -5,7 +5,7 @@ main:
 	mov rax, 1
 	mov rdi, 1
 	mov rsi, text
-	mov rdx, 14
+	mov rdx, 17
 	syscall
 
 	mov rax, 60
@@ -13,4 +13,4 @@ main:
 	syscall
 
 section .data
-        text db "Hello, World!",10
+        text db "Hello, Holberton",10
