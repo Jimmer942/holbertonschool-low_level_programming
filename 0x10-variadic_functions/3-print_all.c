@@ -33,7 +33,7 @@ void p_string(va_list val)
 {
 	char *s;
 
-	s = va_arg(valist, char *);
+	s = va_arg(val, char *);
 	if (s == NULL)
 		s = "(nil)";
 	printf("%s", s);
