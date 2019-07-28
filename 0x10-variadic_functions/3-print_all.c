@@ -31,7 +31,12 @@ void p_float(va_list val)
  */
 void p_string(va_list val)
 {
-	printf("%s",  va_arg(val, char *));
+	char *s;
+
+	s = va_arg(val, char *);
+	if (s == NULL)
+		s = "(nil)";
+	printf("%s",  s);
 }
 /**
  * print_all - is a function that selects the correct function to print.
@@ -53,7 +58,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	i = 0;
 
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format != NULL)
 	{
 		j = 0;
 		while (j < 4)
