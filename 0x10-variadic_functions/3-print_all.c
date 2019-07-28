@@ -31,12 +31,7 @@ void p_float(va_list val)
  */
 void p_string(va_list val)
 {
-	char *s;
-
-	s = va_arg(val, char *);
-	if (s == NULL)
-		s = "(nil)";
-	printf("%s", s);
+	printf("%s",  va_arg(val, char *));
 }
 /**
  * print_all - is a function that selects the correct function to print.
