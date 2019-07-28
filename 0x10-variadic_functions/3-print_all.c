@@ -48,20 +48,20 @@ void print_all(const char * const format, ...)
 		{"c", p_char},
 		{"i", p_int},
 		{"f", p_float},
-		{"s", p_string},
-		{NULL, NULL}
+		{"s", p_string}
 	};
 	va_list args;
 	int i, j;
 	char *c = "";
 
+
 	va_start(args, format);
 	i = 0;
 
-	while (format[i] != '\0' && format != NULL)
+	while (format != NULL && format[i] != '\0')
 	{
-		j = 0;
-		while (j < 4)
+		j = 3;
+		while (j >= 0)
 		{
 			if (*to_print[j].id == format[i])
 			{
@@ -70,7 +70,7 @@ void print_all(const char * const format, ...)
 				c = ", ";
 				break;
 			}
-			j++;
+			j--;
 		}
 		i++;
 	}
