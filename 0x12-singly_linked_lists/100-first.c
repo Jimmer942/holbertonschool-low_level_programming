@@ -4,8 +4,6 @@
  * "You're beat! and yet, you must allow,\n
  * I bore my house upon my back!\n"
  * before the main function is executed.
- * @h: linked list to print.
- * Return: the length of the list.
  */
 
 void __attribute__ ((constructor)) my_constructor()
