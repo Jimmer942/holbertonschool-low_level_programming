@@ -7,12 +7,12 @@ fmt:	      db "%s", 10, 0
 	global main
 main:
 
-	mov esi, msg
-	mov edi, fmt
+	mov esi, msg    ; 64-bit Direccion comienzo de la cadena
+	mov edi, fmt    ; Formato de la cadena
 	mov eax, 0
-
+	;; el numero de argumentos no enteros pasados
 	call printf
 
-	mov ebx, 0
-	mov eax, 1
-	int 0x80
+	mov ebx, 0      ; normal-exit code
+	mov eax, 1      ; process-termination service
+	syscall
