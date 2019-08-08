@@ -5,8 +5,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i, a = 1, flag = 0;
-	unsigned long int p, b;
+	unsigned long int i, a = 1, flag = 0, p, b;
 
 	if (n == 0)
 	{
@@ -18,7 +17,7 @@ void print_binary(unsigned long int n)
 		p = ((a << (63 - i)) & n);
 		if (p >> (63 - i))
 			flag = 1;
-		if (flag)
+		if (flag != 0)
 		{
 			b = p >> (63 - i);
 			_putchar(b + 48);
