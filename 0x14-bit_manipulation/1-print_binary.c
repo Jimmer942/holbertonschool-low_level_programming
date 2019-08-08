@@ -8,11 +8,6 @@ void print_binary(unsigned long int n)
 	int i, a = 1, b, flag = 0;
 	unsigned long int p;
 
-	if (n == 0)
-	{
-		_putchar(48);
-		return;
-	}
 	for (i = 0; i < 64; i++)
 	{
 		p = ((a << (63 - i)) & n);
@@ -24,4 +19,6 @@ void print_binary(unsigned long int n)
 			_putchar(b + 48);
 		}
 	}
+	if (n == 0)
+		_putchar(48);
 }
