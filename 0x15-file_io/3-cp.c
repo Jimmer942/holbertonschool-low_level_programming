@@ -56,6 +56,6 @@ int main(int argc, char *argv[])
 		error(3, file_from, argv[1]);
 	close_file = close(file_to);
 	if (close_file == -1)
-		error(3, file_to, argv[2]);
+		error(3, file_from, argv[2]);
 	return (0);
 }
