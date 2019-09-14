@@ -7,8 +7,10 @@ void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *p;
 
+	if (head == NULL)
+		return;
 	p = head;
-	while (p->prev != NULL && p != NULL)
+	while (p->prev != NULL)
 		p = p->prev;
 	while (p != NULL)
 	{
