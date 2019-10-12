@@ -45,12 +45,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (0);
-
 	index = key_index((unsigned char *)key, ht->size);
-
 	new_node = add_node_hash(&(ht->array[index]), key, value);
-		if (new_node == NULL)
-			return (0);
-
+	if (new_node == NULL)
+		return (0);
 	return (1);
 }
