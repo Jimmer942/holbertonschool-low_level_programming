@@ -8,6 +8,8 @@
  */
 void shell_sort(int *array, size_t size)
 {
+	if (array == NULL || size < 2)
+		return;
 	size_t gap = 1, i, j;
 	int temp;
 
