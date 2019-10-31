@@ -8,7 +8,7 @@
  */
 void counting_sort(int *array, size_t size)
 {
-	size_t i, k;
+	size_t i;
 	int j, max = 0;
 	int *aux = NULL, *count = NULL;
 
@@ -37,11 +37,11 @@ void counting_sort(int *array, size_t size)
 
 	for (i = 1; i < size; i++)
 	{
-		aux[count[array[i]]] = array[i];
+		aux[count[array[i]] - 1] = array[i];
 		count[array[i]]--;
 	}
-	for (i = 0, k = 1; i < size; i++, k++)
-		array[i] = aux[k];
+	for (i = 0; i < size; i++)
+		array[i] = aux[i];
 	free(count);
 	free(aux);
 }
