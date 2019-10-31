@@ -1,50 +1,48 @@
 #include "sort.h"
 #include <stdlib.h>
 /**
- * counting_sort - implementation of counting sort algorithm
- * @array: array to be sorted
- * @size: array's size
- * Return: nothing
+ * counting_sort - counting sort algorithm
+ * @array: array of integers
+ * @size: size of the array
  */
 void counting_sort(int *array, size_t size)
 {
-	int i, max;
-	size_t j;
-	int *output = NULL, *count = NULL;
+	size_t i;
+	int max = 0, j;
+	int *aux = NULL, *count = NULL;
 
 	if (array == NULL || size < 2)
 		return;
 
-	output = malloc((size + 1) * sizeof(int));
-	if (output == NULL)
+	aux = malloc((size + 1) * sizeof(int));
+	if (aux == NULL)
 		return;
 
-	max = array[0];
-	for (j = 1; j < size; j++)
+	for (i = 0; i < size; i++)
 	{
-		if (array[j] > max)
-			max = array[j];
+		if (array[i] > max)
+			max = array[i];
 	}
 
 	count = malloc((max + 1) * sizeof(int));
 	if (count == NULL)
 	{
-		free(output);
+		free(aux);
 		return;
 	}
 
-	for (j = 0; j < size; j++)
-		count[array[j]]++;
-	for (i = 1; i <= max; i++)
-		count[i] += count[i - 1];
+	for (i = 0; i < size; i++)
+		count[array[i]]++;
+	for (j = 1; j <= max; j++)
+		count[j] += count[j - 1];
 	print_array(count, max + 1);
-	for (j = 0; j < size; j++)
+	for (i = 0; i < size; i++)
 	{
-		output[count[array[j]] - 1] = array[j];
-		count[array[j]]--;
+		aux[count[array[i]] - 1] = array[i];
+		count[array[i]]--;
 	}
-	for (j = 0; j < size; j++)
-		array[j] = output[j];
+	for (i = 0; i < size; i++)
+		array[i] = aux[i];
 	free(count);
-	free(output);
+	free(aux);
 }
