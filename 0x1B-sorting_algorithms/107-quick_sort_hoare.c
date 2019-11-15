@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <sys/types.h>
 /**
  * partition - divides the array and swap datas
  * @array: array of integers
