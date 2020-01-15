@@ -1,5 +1,6 @@
-#ifndef SEARCH
-#define Search
+#ifndef _SEARCH_
+#define _SEARCH_
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
