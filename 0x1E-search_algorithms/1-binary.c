@@ -29,10 +29,10 @@ void print_array(int *array, size_t l, size_t r)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	if (array == NULL)
-		return (-1);
 	size_t l = 0, r = size - 1,  m = 0;
 
+	if (array == NULL)
+		return (-1);
 	while (l <= r)
 	{
 		print_array(array, l, r);
